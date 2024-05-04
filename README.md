@@ -2,15 +2,15 @@
 marp: true
 theme: your-theme
 paginate: true
-header: 'Java Main Method without Class Definition - subscribe us on <https://youtube.com/@semusings>'
+header: 'Unnamed Classes and Instance Main Methods - subscribe us on <https://youtube.com/@semusings>'
 footer: © Software Engineering Musings - <https://bhuwanupadhyay.dev/>
 ---
 
-# Java Main Method without Class Definition
+# Unnamed Classes and Instance Main Methods
 
 **Tags:**
 
-- Github
+- [JEP 445: Unnamed Classes and Instance Main Methods](https://openjdk.org/jeps/445)
 
 ---
 

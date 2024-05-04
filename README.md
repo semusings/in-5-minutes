@@ -21,10 +21,17 @@ Classic Hello, World! program that is often used as the first program for Java s
 
 ```java
 public class HelloWorld { 
-    public static void main(String[] args) { 
-        System.out.println("Hello, World!");
+    static String greeting = "Hello, World!";
+
+    public static void main(String[] args) {
+        System.out.println(String.format(":%s\n:%s\n:%s", HelloWorld.class.getName(), greeting,
+                "Subscribe us on youtube.com/@semusings"));        
     }
 }
+```
+
+```bash
+java --source 22 --enable-preview HelloWorld.java
 ```
 
 In this approach -> too much code, too many concepts, too many constructs 
@@ -33,13 +40,18 @@ In this approach -> too much code, too many concepts, too many constructs
 
 ## Mordern Approach
 
-* Allow to lunch instance main methods. Such methods are not static, need not be public, and need not have a String[] parameter. 
+Allow to lunch instance main methods. Such methods are not static, need not be public, and need not have a String[] parameter. 
 
 ```java
-class HelloWorld { 
-    void main() { 
-        System.out.println("Hello, World!");
+class HelloWorldUsingInstanceMethod {
+
+    String greeting = "Hello, World!";
+
+    void main() {
+        System.out.println(String.format(":%s\n:%s\n:%s", getClass().getName(), greeting,
+                "Subscribe us on youtube.com/@semusings"));
     }
+
 }
 ```
 
@@ -51,12 +63,19 @@ java --source 22 --enable-preview HelloWorldUsingInstanceMethod.java
 
 ## Mordern Approach (contd.)
 
-* Unnamed classes to make the class declaration implicit
+Unnamed classes to make the class declaration implicit
 
 ```java
+String greeting = "Hello, World!";
+
 void main() {
-    System.out.println("Hello World! \nSubscribe us on youtube.com/@semusings");
+    System.out.println(String.format(":%s\n:%s\n:%s", getClass().getName(), greeting,
+            "Subscribe us on youtube.com/@semusings"));
 }
+```
+
+```bash
+java --source 22 --enable-preview HelloWorldUsingUnnamedClass.java
 ```
 
 ---

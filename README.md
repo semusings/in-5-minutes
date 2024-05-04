@@ -9,9 +9,13 @@ header: '© Software Engineering Musings - <https://bhuwanupadhyay.dev/> - subsc
 
 # Unnamed Classes and Instance Main Methods
 
-**JEP:** https://openjdk.org/jeps/445
+**JEP-445**
 
-- 
+-  Ever found Java's "Hello, World!" program a bit too complex?
+
+- Java's complexity can be daunting for beginners.
+
+- No more unnecessary clutter in simple programs.
 
 ---
 
@@ -80,12 +84,19 @@ java --source 22 --enable-preview HelloWorldUsingUnnamedClass.java
 
 ---
 
-## Conclusion
+## Thank You!
 
+> Please feel free to reach out to me if you have any question.
+>
+> semusings@gmail.com
+
+&nbsp;
+&nbsp;
+Subscribe us on YouTube <https://youtube.com/@semusings>
 
 
 ---
 
 ### References
 
-
+- <https://openjdk.org/jeps/445>

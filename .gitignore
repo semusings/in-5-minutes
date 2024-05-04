@@ -82,5 +82,7 @@ out/
 /nbdist/
 /.nb-gradle/
 
+*.class
+
 ### VS Code ###
 .vscode/

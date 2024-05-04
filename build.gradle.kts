@@ -1,14 +1,14 @@
 plugins {
-	java
-	id("org.springframework.boot") version "3.2.5"
-	id("io.spring.dependency-management") version "1.1.4"
+	`java-library`
 }
 
 group = "dev.bhuwanupadhyay"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_22
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(22))
+    }
 }
 
 repositories {
@@ -16,19 +16,15 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")	
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+    jvmArgs("--enable-preview")
 }
 
 tasks.withType<JavaCompile>().configureEach {
     options.compilerArgs.add("--enable-preview")
-}
-
-tasks.withType<Test>().configureEach {
-    jvmArgs("--enable-preview")
-    useJUnitPlatform()
-}
-
-tasks.withType<JavaExec>().configureEach {
-    jvmArgs("--enable-preview")
 }
